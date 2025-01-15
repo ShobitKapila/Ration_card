@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eRation Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <h1>eRation Card System</h1>
+      <p>Online Ration Card Management Portal</p>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#apply">Apply for Ration Card</a></li>
+      <li><a href="#status">Check Status</a></li>
+      <li><a href="#edit">Update Details</a></li>
+    </ul>
+  </nav>
+
+  <!-- Apply for Ration Card Section -->
+  <section id="apply">
+    <h2>Apply for Ration Card</h2>
+    <form action="#status" method="get">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+      <label for="motherName">Mother's Name:</label>
+      <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name" required>
+
+      <label for="fatherName">Father's Name:</label>
+      <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+
+      <label for="maritalStatus">Marital Status:</label>
+      <select id="maritalStatus" name="maritalStatus" required>
+        <option value="" disabled selected>Select marital status</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+
+      <button type="submit">Save Details</button>
+    </form>
+  </section>
+
+  <!-- Check Status Section -->
+  <section id="status">
+    <h2>Check Status</h2>
+    <div class="status-container">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Age:</strong> 30</p>
+      <p><strong>Mother's Name:</strong> Jane Doe</p>
+      <p><strong>Father's Name:</strong> Robert Doe</p>
+      <p><strong>Marital Status:</strong> Married</p>
+      <a href="#edit" class="edit-button">Edit Details</a>
+    </div>
+  </section>
+
+  <!-- Update Details Section -->
+  <section id="edit">
+    <h2>Update Your Details</h2>
+    <form action="#status" method="get">
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" name="editName" value="John Doe" required>
+
+      <label for="editAge">Age:</label>
+      <input type="number" id="editAge" name="editAge" value="30" required>
+
+      <label for="editMotherName">Mother's Name:</label>
+      <input type="text" id="editMotherName" name="editMotherName" value="Jane Doe" required>
+
+      <label for="editFatherName">Father's Name:</label>
+      <input type="text" id="editFatherName" name="editFatherName" value="Robert Doe" required>
+
+      <label for="editMaritalStatus">Marital Status:</label>
+      <select id="editMaritalStatus" name="editMaritalStatus" required>
+        <option value="Single">Single</option>
+        <option value="Married" selected>Married</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+
+      <button type="submit">Update Details</button>
+    </form>
+  </section>
+</body>
+</html>
