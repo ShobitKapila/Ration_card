@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eRation Card</title>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <h1>eRation Card System</h1>
+      <p>Online Ration Card Management Portal</p>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#apply">Apply for Ration Card</a></li>
+      <li><a href="#status">Check Status</a></li>
+    </ul>
+  </nav>
+
+  <!-- Apply for Ration Card Section -->
+  <section id="apply">
+    <h2>Apply for Ration Card</h2>
+    <form id="applyForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+      <label for="motherName">Mother's Name:</label>
+      <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name" required>
+
+      <label for="fatherName">Father's Name:</label>
+      <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+
+      <label for="maritalStatus">Marital Status:</label>
+      <select id="maritalStatus" name="maritalStatus" required>
+        <option value="" disabled selected>Select marital status</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+
+      <button type="button" onclick="addApplication()">Save Details</button>
+    </form>
+  </section>
+
+  <!-- Check Status Section -->
+  <section id="status">
+    <h2>Check Status</h2>
+    <div class="status-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mother's Name</th>
+            <th>Father's Name</th>
+            <th>Marital Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="applicationsTable">
+          <!-- Applications will appear here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+</html>
